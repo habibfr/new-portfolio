@@ -20,8 +20,14 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-neo-bg border-t-3 border-neo-black">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="experience" className="py-20 bg-neo-bg border-t-3 border-neo-black relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-1/4 left-5 w-12 h-12 bg-neo-blue border-3 border-neo-black shadow-neo animate-spin-slow opacity-60"></div>
+            <div className="absolute bottom-1/3 right-5 w-16 h-16 bg-neo-yellow rounded-full border-3 border-neo-black shadow-neo animate-bounce delay-500 opacity-60"></div>
+            <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-neo-purple border-3 border-neo-black shadow-neo rotate-12 opacity-30 animate-pulse"></div>
+            <div className="absolute bottom-20 left-1/2 w-10 h-10 bg-neo-pink border-3 border-neo-black shadow-neo animate-bounce delay-200 opacity-50"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <div className="inline-block px-6 py-2 bg-neo-white border-3 border-neo-black shadow-neo -rotate-2">
                         <h2 className="text-4xl font-bold uppercase">My Journey</h2>

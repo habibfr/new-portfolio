@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="text-center md:text-left">
                     <h2 className="text-2xl font-bold tracking-tighter mb-2">HF.</h2>
-                    <p className="text-sm text-gray-400">© 2024 Habib Fatkhul Rohman. All rights reserved.</p>
+                    <p className="text-sm text-neo-white/60">© 2024 Habib Fatkhul Rohman. All rights reserved.</p>
                 </div>
 
                 <div className="flex gap-6 font-bold text-sm uppercase tracking-wider">

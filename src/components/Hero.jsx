@@ -21,7 +21,7 @@ const Hero = () => {
                         <span className="text-4xl md:text-6xl mt-2 block">Full-Stack Developer</span>
                     </h1>
 
-                    <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-700 font-medium border-l-4 border-neo-black pl-4 bg-white/50 py-2">
+                    <p className="mt-4 max-w-2xl mx-auto text-xl text-neo-black/80 font-medium border-l-4 border-neo-black pl-4 bg-neo-white/50 py-2">
                         I build accessible, pixel-perfect, performant, and awesome web experiences using modern technologies.
                     </p>
 

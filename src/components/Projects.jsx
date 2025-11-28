@@ -27,8 +27,14 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-neo-bg border-t-3 border-neo-black">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="py-20 bg-neo-bg border-t-3 border-neo-black relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-10 right-1/3 w-16 h-16 bg-neo-green border-3 border-neo-black shadow-neo animate-bounce delay-1000 opacity-50"></div>
+            <div className="absolute bottom-20 left-10 w-20 h-20 bg-neo-yellow rounded-full border-3 border-neo-black shadow-neo animate-pulse opacity-40"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neo-blue rounded-full border-3 border-neo-black shadow-neo opacity-5 animate-ping"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-12 h-12 bg-neo-pink border-3 border-neo-black shadow-neo animate-spin-slow opacity-40"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex justify-between items-end mb-12">
                     <div className="inline-block px-6 py-2 bg-neo-green border-3 border-neo-black shadow-neo -rotate-1">
                         <h2 className="text-4xl font-bold uppercase">Featured Work</h2>
@@ -52,7 +58,7 @@ const Projects = () => {
 
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                                <p className="text-gray-700 mb-4 font-medium line-clamp-3">
+                                <p className="text-neo-black/80 mb-4 font-medium line-clamp-3">
                                     {project.description}
                                 </p>
 

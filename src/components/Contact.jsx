@@ -3,8 +3,14 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-20 bg-neo-white border-t-3 border-neo-black">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="contact" className="py-20 bg-neo-white border-t-3 border-neo-black relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-neo-blue rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+            <div className="absolute top-20 right-20 w-12 h-12 bg-neo-pink border-3 border-neo-black shadow-neo animate-spin-slow opacity-60"></div>
+            <div className="absolute bottom-10 left-1/3 w-20 h-20 bg-neo-purple border-3 border-neo-black shadow-neo rotate-12 opacity-40 animate-bounce"></div>
+            <div className="absolute top-1/3 left-10 w-10 h-10 bg-neo-yellow rounded-full border-3 border-neo-black shadow-neo animate-ping delay-500 opacity-50"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <div className="inline-block px-6 py-2 bg-neo-pink border-3 border-neo-black shadow-neo mb-8 rotate-1">
@@ -16,7 +22,7 @@ const Contact = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neo-purple to-neo-blue">Let's build something awesome.</span>
                         </h3>
 
-                        <p className="text-lg text-gray-700 mb-8 font-medium max-w-md">
+                        <p className="text-lg text-neo-black/80 mb-8 font-medium max-w-md">
                             I'm currently available for freelance projects and full-time opportunities.
                             If you have a question or just want to say hi, I'll try my best to get back to you!
                         </p>
@@ -24,20 +30,20 @@ const Contact = () => {
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-neo-yellow border-3 border-neo-black shadow-neo-sm">
-                                    <Mail size={24} />
+                                    <Mail size={24} className="text-black" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm uppercase text-gray-500">Email</p>
+                                    <p className="font-bold text-sm uppercase text-neo-black/60">Email</p>
                                     <a href="mailto:hafarowork@gmail.com" className="text-lg font-bold hover:underline">hafarowork@gmail.com</a>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-neo-green border-3 border-neo-black shadow-neo-sm">
-                                    <MapPin size={24} />
+                                    <MapPin size={24} className="text-black" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm uppercase text-gray-500">Location</p>
+                                    <p className="font-bold text-sm uppercase text-neo-black/60">Location</p>
                                     <p className="text-lg font-bold">Surabaya, Indonesia</p>
                                 </div>
                             </div>

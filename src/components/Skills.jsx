@@ -20,8 +20,14 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-neo-white border-t-3 border-neo-black">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="skills" className="py-20 bg-neo-white border-t-3 border-neo-black relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-20 right-20 w-8 h-8 bg-neo-purple border-3 border-neo-black shadow-neo animate-ping opacity-40"></div>
+            <div className="absolute bottom-20 left-20 w-24 h-24 bg-neo-pink rounded-full border-3 border-neo-black shadow-neo opacity-30"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-neo-green border-3 border-neo-black shadow-neo rotate-45 opacity-10 animate-spin-slow"></div>
+            <div className="absolute top-1/3 left-1/4 w-14 h-14 bg-neo-yellow border-3 border-neo-black shadow-neo animate-bounce delay-100 opacity-40"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <div className="inline-block px-6 py-2 bg-neo-yellow border-3 border-neo-black shadow-neo rotate-2">
                         <h2 className="text-4xl font-bold uppercase">Tech Stack</h2>

@@ -3,11 +3,39 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-neo-bg text-neo-black font-sans antialiased;
+  :root {
+    --bg-color: #f0f0f0;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --border-color: #000000;
+    --shadow-color: #000000;
+    --accent-yellow: #FFDE59;
+    --accent-blue: #5CE1E6;
+    --accent-pink: #FF66C4;
+    --accent-green: #7ED957;
+    --accent-purple: #C45CFF;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  .dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --border-color: #ffffff;
+    --shadow-color: #ffffff;
+    /* Accents can stay the same or be slightly adjusted for dark mode visibility, 
+       but usually pop colors work well on dark too. */
+  }
+
+  body {
+    @apply bg-neo-bg text-neo-black font-sans antialiased transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
 }
@@ -16,12 +44,12 @@
   .neo-card {
     @apply bg-neo-white border-3 border-neo-black shadow-neo transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-neo-lg;
   }
-  
+
   .neo-btn {
     @apply px-6 py-3 bg-neo-black text-neo-white font-bold border-3 border-neo-black shadow-neo active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all hover:bg-neo-white hover:text-neo-black;
   }
 
   .neo-input {
-    @apply w-full p-3 border-3 border-neo-black shadow-neo-sm focus:outline-none focus:shadow-neo transition-all;
+    @apply w-full p-3 bg-neo-white text-neo-black border-3 border-neo-black shadow-neo-sm focus:outline-none focus:shadow-neo transition-all placeholder:text-gray-500;
   }
 }
