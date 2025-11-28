@@ -4,6 +4,13 @@ import { Briefcase } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
+            title: "Junior Technical Consultant",
+            company: "PT. Avolut Global Indonesia",
+            period: "2025 - Present",
+            description: "Analyze client requirements, implement ERP/CRM solutions, support system integrations, testing, documentation, and maintenance for optimal business operations.",
+            color: "bg-neo-green"
+        },
+        {
             title: "Freelance Fullstack Developer",
             company: "Self-Employed",
             period: "2023 - Present",
@@ -13,7 +20,7 @@ const Experience = () => {
         {
             title: "Information System Student",
             company: "Dinamika University",
-            period: "2021 - Present",
+            period: "2021 - 2025",
             description: "Majoring in Information Systems. Active in student organizations and tech communities. Focusing on Software Engineering and Data Analysis.",
             color: "bg-neo-blue"
         }
