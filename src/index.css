@@ -4,16 +4,24 @@
 
 @layer base {
   body {
-    @apply bg-primary text-white font-sans antialiased overflow-x-hidden;
+    @apply bg-neo-bg text-neo-black font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
   }
 }
 
 @layer components {
-  .glass-panel {
-    @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-xl;
+  .neo-card {
+    @apply bg-neo-white border-3 border-neo-black shadow-neo transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-neo-lg;
   }
   
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-indigo;
+  .neo-btn {
+    @apply px-6 py-3 bg-neo-black text-neo-white font-bold border-3 border-neo-black shadow-neo active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all hover:bg-neo-white hover:text-neo-black;
+  }
+
+  .neo-input {
+    @apply w-full p-3 border-3 border-neo-black shadow-neo-sm focus:outline-none focus:shadow-neo transition-all;
   }
 }

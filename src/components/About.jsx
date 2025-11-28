@@ -1,97 +1,47 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { GraduationCap, User, Calendar } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 relative">
-            <div className="max-w-7xl mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16"
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        About <span className="text-gradient">Me</span>
-                    </h2>
-                    <div className="w-20 h-1 bg-accent-blue rounded-full" />
-                </motion.div>
+        <section id="about" className="py-20 bg-neo-white border-t-3 border-neo-black">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center gap-12">
+                    {/* Image/Avatar Section */}
+                    <div className="w-full md:w-1/3">
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-neo-black translate-x-4 translate-y-4 border-3 border-neo-black"></div>
+                            <div className="relative bg-neo-blue border-3 border-neo-black p-2 aspect-square overflow-hidden">
+                                <img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Habib"
+                                    alt="Habib Fatkhul Rohman"
+                                    className="w-full h-full object-cover bg-neo-white border-3 border-neo-black"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
-                <div className="grid md:grid-cols-2 gap-12">
-                    {/* Bio Card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="glass-panel p-8 rounded-3xl relative overflow-hidden group"
-                    >
-                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <User size={120} />
+                    {/* Content Section */}
+                    <div className="w-full md:w-2/3">
+                        <div className="inline-block px-4 py-1 bg-neo-purple border-3 border-neo-black shadow-neo-sm mb-6 rotate-1">
+                            <h2 className="text-3xl font-bold uppercase">About Me</h2>
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                            <span className="p-2 rounded-lg bg-accent-blue/10 text-accent-blue">
-                                <User size={24} />
-                            </span>
-                            Who I Am
-                        </h3>
-
-                        <div className="space-y-4 text-gray-300 leading-relaxed">
-                            <p>
-                                Hello! My name is <span className="text-white font-semibold">Habib Fatkhul Rohman || Hafarou</span>.
+                        <div className="neo-card p-8 bg-neo-bg">
+                            <p className="text-lg leading-relaxed mb-6">
+                                Hello! My name is <span className="font-bold bg-neo-yellow px-1">Habib Fatkhul Rohman</span> (aka Hafarou).
                                 I am an Information System student at Dinamika University with a deep passion for
                                 Mobile and Website application development.
                             </p>
-                            <p>
-                                My journey started with web development, but I soon discovered the exciting world of
-                                mobile programming. I believe that continuous learning and personal projects are the
-                                keys to mastery in this ever-evolving field.
+                            <p className="text-lg leading-relaxed mb-6">
+                                My journey in tech started with curiosity about how things work on the internet,
+                                and it has evolved into a career where I build robust and scalable applications.
+                                I love solving complex problems and turning ideas into reality through code.
                             </p>
-                            <p>
-                                I am capable of creating user-friendly, visually appealing, and high-performance
-                                applications. Currently, I'm focused on expanding my tech stack and building
-                                innovative solutions.
+                            <p className="text-lg leading-relaxed">
+                                When I'm not coding, you can find me exploring new technologies, contributing to open source,
+                                or enjoying a good cup of coffee.
                             </p>
                         </div>
-                    </motion.div>
-
-                    {/* Education & Experience Card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4 }}
-                        className="glass-panel p-8 rounded-3xl relative overflow-hidden group"
-                    >
-                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <GraduationCap size={120} />
-                        </div>
-
-                        <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                            <span className="p-2 rounded-lg bg-accent-purple/10 text-accent-purple">
-                                <GraduationCap size={24} />
-                            </span>
-                            Education
-                        </h3>
-
-                        <div className="space-y-8">
-                            <div className="relative pl-8 border-l-2 border-white/10">
-                                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-accent-purple" />
-                                <h4 className="text-xl font-semibold text-white">Information System</h4>
-                                <p className="text-accent-purple mb-1">Dinamika University</p>
-                                <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-                                    <Calendar size={14} />
-                                    <span>Aug 2021 - Present</span>
-                                </div>
-                                <p className="text-gray-400 text-sm">
-                                    Focusing on software engineering, database management, and system analysis.
-                                    Active in programming communities and tech workshops.
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

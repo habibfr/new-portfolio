@@ -6,23 +6,26 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'sans-serif'],
+      },
       colors: {
-        primary: "#0f172a",
-        accent: {
-          blue: "#38bdf8",
-          indigo: "#818cf8",
-          purple: "#c084fc",
-        }
+        'neo-bg': '#f0f0f0',
+        'neo-black': '#000000',
+        'neo-white': '#ffffff',
+        'neo-yellow': '#FFDE59',
+        'neo-blue': '#5CE1E6',
+        'neo-pink': '#FF66C4',
+        'neo-green': '#7ED957',
+        'neo-purple': '#C45CFF',
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      boxShadow: {
+        'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+        'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        }
+      borderWidth: {
+        '3': '3px',
       }
     },
   },

@@ -1,17 +1,19 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="py-8 border-t border-white/5 bg-primary">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p className="text-gray-400 text-sm">
-                    © {new Date().getFullYear()} Hafaro Dev. All rights reserved.
-                </p>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <span>Made with</span>
-                    <Heart size={16} className="text-red-500 fill-red-500" />
-                    <span>using React & Tailwind</span>
+        <footer className="bg-neo-black text-neo-white py-10 border-t-3 border-neo-black">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="text-center md:text-left">
+                    <h2 className="text-2xl font-bold tracking-tighter mb-2">HF.</h2>
+                    <p className="text-sm text-gray-400">© 2024 Habib Fatkhul Rohman. All rights reserved.</p>
+                </div>
+
+                <div className="flex gap-6 font-bold text-sm uppercase tracking-wider">
+                    <a href="#" className="hover:text-neo-yellow transition-colors">Home</a>
+                    <a href="#about" className="hover:text-neo-pink transition-colors">About</a>
+                    <a href="#projects" className="hover:text-neo-blue transition-colors">Projects</a>
+                    <a href="#contact" className="hover:text-neo-green transition-colors">Contact</a>
                 </div>
             </div>
         </footer>
