@@ -1,0 +1,84 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            # Login to GHCR on VPS (using the same token if possible, or public access)
+            # Note: For private packages, you need to docker login. 
+            # Assuming public package or user will configure auth.
+            # For now, we'll try to pull. If it fails, user needs to make package public.
+            
+            echo "Deploying..."
+            
+            # Navigate to project directory (Adjust this path if needed)
+            # We assume the user clones the repo to ~/portfolio or similar.
+            # If not, we can create it.
+            
+            mkdir -p ~/dev/new-portfolio
+            cd ~/dev/new-portfolio
+            
+            # Pull the latest docker-compose.yml (or just use the one in the repo if we pulled code)
+            # We can just pull the image and run it if we have the compose file.
+            # Let's assume we want to update the code on the server too.
+            
+            if [ -d ".git" ]; then
+              git pull origin main
+            else
+              git clone https://github.com/${{ github.repository }}.git .
+            fi
+
+            # Pull the new image
+            docker compose pull
+
+            # Restart containers
+            docker compose up -d --remove-orphans
+            
+            # Clean up unused images
+            docker image prune -f
