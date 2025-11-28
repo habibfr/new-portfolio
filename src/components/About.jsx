@@ -40,7 +40,7 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-300 leading-relaxed">
                             <p>
-                                Hello! My name is <span className="text-white font-semibold">Habib Fatkhul Rohman</span>.
+                                Hello! My name is <span className="text-white font-semibold">Habib Fatkhul Rohman || Hafarou</span>.
                                 I am an Information System student at Dinamika University with a deep passion for
                                 Mobile and Website application development.
                             </p>
