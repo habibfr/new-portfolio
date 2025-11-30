@@ -34,17 +34,17 @@ const About = () => {
                         <div className="neo-card p-8 bg-neo-bg">
                             <p className="text-lg leading-relaxed mb-6">
                                 Hello! My name is <span className="font-bold bg-neo-yellow px-1">Habib Fatkhul Rohman</span> (aka Hafarou).
-                                I am an Information System student at Dinamika University with a deep passion for
-                                Mobile and Website application development.
+                                I am a software engineer specializing in mobile and web application development.
+                                I focus on building robust, scalable, and efficient software solutions that solve complex problems and bring ideas to life.
                             </p>
                             <p className="text-lg leading-relaxed mb-6">
-                                My journey in tech started with curiosity about how things work on the internet,
-                                and it has evolved into a career where I build robust and scalable applications.
-                                I love solving complex problems and turning ideas into reality through code.
+                                My passion for technology started with curiosity about how the internet works, and
+                                it has evolved into a professional career dedicated to writing clean, maintainable code and
+                                delivering valuable software products.
                             </p>
                             <p className="text-lg leading-relaxed">
-                                When I'm not coding, you can find me exploring new technologies, contributing to open source,
-                                or enjoying a good cup of coffee.
+                                When I'm not coding, I enjoy exploring new technologies, contributing to open source projects,
+                                and having a good cup of coffee to spark creativity.
                             </p>
                         </div>
                     </div>
